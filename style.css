@@ -1,0 +1,111 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #b22222;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Seção Hero */
+.hero {
+  background: url('imagens/servicos.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #b22222;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Seções */
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #b22222;
+}
+
+.servicos ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+
+.vantagens-lista {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.vantagem {
+  flex: 1 1 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Contato */
+.contato a {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+  background-color: #b22222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
