@@ -1,90 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Extralimp - Serviços de Limpeza e Manutenção</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extralimp - Soluções em Limpeza, Recepção e Áreas Verdes</title>
+    
+    <!-- Ícone do Site -->
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Folha de Estilo CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Extralimp</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#vantagens">Vantagens</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Excelência em Limpeza e Manutenção</h2>
-      <p>Serviços profissionais de limpeza, recepção e manutenção de áreas verdes em Curitiba e região.</p>
-      <a href="#contato" class="btn">Solicite um Orçamento</a>
-    </div>
-  </section>
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo Extralimp" class="logo-img">
+                <span class="logo-text">Extralimp</span>
+            </a>
 
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <h2>Sobre a Extralimp</h2>
-      <p>Com sede em Curitiba-PR, a Extralimp oferece soluções completas em limpeza, recepção e manutenção de áreas verdes. Nossa equipe é treinada para atender com eficiência e qualidade, garantindo ambientes limpos, organizados e bem cuidados.</p>
-    </div>
-  </section>
+            <!-- Navegação para Desktop -->
+            <nav class="nav-desktop">
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#vantagens">Vantagens</a>
+                <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+            </nav>
 
-  <section id="servicos" class="servicos">
-    <div class="container">
-      <h2>Serviços</h2>
-      <ul>
-        <li>Limpeza e conservação predial</li>
-        <li>Serviços de recepção e portaria</li>
-        <li>Manutenção de jardins e áreas verdes</li>
-        <li>Limpeza pós-obra</li>
-        <li>Serviços de zeladoria</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="vantagens" class="vantagens">
-    <div class="container">
-      <h2>Por que escolher a Extralimp?</h2>
-      <div class="vantagens-lista">
-        <div class="vantagem">
-          <h3>Profissionais Qualificados</h3>
-          <p>Equipe treinada e capacitada para oferecer o melhor serviço.</p>
+            <!-- Botão do Menu Mobile -->
+            <button id="menu-toggle" class="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+            </button>
         </div>
-        <div class="vantagem">
-          <h3>Atendimento Personalizado</h3>
-          <p>Soluções sob medida para as necessidades de cada cliente.</p>
+        <!-- Menu Mobile -->
+        <nav id="mobile-menu" class="nav-mobile hidden">
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#vantagens">Vantagens</a>
+            <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== HERO SECTION ========== -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <h1>Ambientes impecáveis, <span class="text-primary">relações de confiança</span>.</h1>
+                <p>Soluções completas e personalizadas em limpeza, recepção e manutenção de áreas verdes para empresas e condomínios em Curitiba-PR.</p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-primary btn-lg">Fale com um especialista</a>
+                    <a href="#servicos" class="btn btn-secondary btn-lg">Nossos Serviços</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SERVIÇOS ========== -->
+        <section id="servicos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Nossas Especialidades</span>
+                    <h2>Soluções que transformam o seu espaço</h2>
+                    <p>Oferecemos um portfólio completo para garantir a conservação, segurança e bem-estar do seu patrimônio.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Card Serviço: Limpeza -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.6 2.2a.9.9 0 0 1 1 0l4.3 2.6a.9.9 0 0 1 .4 1l-2.1 4.9a.9.9 0 0 1-1.6-.7l2.1-4.9L14 3.5l-2.1 4.9a.9.9 0 0 1-1.6-.7l2.1-4.9a.9.9 0 0 1 .4-1z"/><path d="m3.1 9.9 7.9 7.9a.9.9 0 0 0 1.3 0l7.9-7.9a.9.9 0 0 0-.6-1.5H3.7a.9.9 0 0 0-.6 1.5z"/></svg>
+                        </div>
+                        <h3>Limpeza e Conservação</h3>
+                        <p>Serviços de limpeza predial, comercial e pós-obra com equipes treinadas, equipamentos modernos e produtos de alta performance.</p>
+                    </div>
+
+                    <!-- Card Serviço: Recepção -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                        </div>
+                        <h3>Recepção e Portaria</h3>
+                        <p>Profissionais qualificados para controle de acesso, atendimento ao público e portaria, garantindo segurança e uma excelente primeira impressão.</p>
+                    </div>
+                    
+                    <!-- Card Serviço: Áreas Verdes -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22s1.4-2.8 3.4-3.5S9 17 9 17s2.8-.7 3.5-2.6S17 6 17 6s1.4-1.4 2.1-2.1"/><path d="M16 22s-2-1-3.5-2.5S10 16 10 16s-1-2.5-2.5-4S2 8 2 8s-1-2.5-2.5-4"/><path d="M22 2s-1.4 2.8-3.4 3.5S15 7 15 7s-2.8.7-3.5 2.6S7 18 7 18s-1.4 1.4-2.1 2.1"/></svg>
+                        </div>
+                        <h3>Manutenção de Áreas Verdes</h3>
+                        <p>Cuidado especializado com jardins e áreas externas, incluindo poda, paisagismo, tratamento de solo e manutenção contínua.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SOBRE NÓS ========== -->
+        <section id="sobre" class="section bg-light">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Reunião de equipe da Extralimp">
+                </div>
+                <div class="about-content">
+                    <span class="subtitle">Quem Somos</span>
+                    <h2>Compromisso com a excelência desde 2015</h2>
+                    <p>A Extralimp nasceu em Curitiba com a missão de elevar o padrão dos serviços de facilities. Combinamos a expertise de profissionais dedicados com uma gestão focada nas necessidades de cada cliente.</p>
+                    <p>Nossa filosofia é simples: cuidar do seu espaço como se fosse o nosso, construindo parcerias duradouras baseadas na confiança e na entrega de resultados superiores.</p>
+                    <a href="#contato" class="btn btn-primary">Converse Conosco</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========== VANTAGENS ========== -->
+        <section id="vantagens" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Nossos Diferenciais</span>
+                    <h2>Por que escolher a Extralimp?</h2>
+                </div>
+                <div class="advantages-grid">
+                    <!-- Vantagem 1 -->
+                    <div class="advantage-card">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <h3>Profissionais Qualificados</h3>
+                        <p>Equipe em constante treinamento, pronta para executar os serviços com máxima eficiência e discrição.</p>
+                    </div>
+                    <!-- Vantagem 2 -->
+                    <div class="advantage-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.37 3.63a2.12 2.12 0 1 1 3 3L12 16l-4 1 1-4Z"/></svg>
+                        <h3>Atendimento Personalizado</h3>
+                        <p>Desenvolvemos planos de trabalho sob medida, que se ajustam perfeitamente à rotina e orçamento do seu negócio.</p>
+                    </div>
+                    <!-- Vantagem 3 -->
+                    <div class="advantage-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v4c0 .6.4 1 1 1h2.2c.4 0 .7.2.9.6l1.8 2.4c.2.3.5.4.8.4s.6-.2.8-.4l1.8-2.4c.2-.4.5-.6.9-.6H16c.6 0 1-.4 1-1v-4c0-.6-.4-1-1-1H8c-.6 0-1 .4-1 1Z"/><path d="M12 10V2M7 4l2 2"/><path d="m17 4-2 2"/></svg>
+                        <h3>Qualidade Garantida</h3>
+                        <p>Utilizamos checklists e supervisão contínua para assegurar a excelência e a sua total satisfação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTATO ========== -->
+        <section id="contato" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Fale Conosco</span>
+                    <h2>Estamos prontos para atender você</h2>
+                    <p>Preencha o formulário abaixo ou entre em contato pelos nossos canais. Nossa equipe retornará o mais breve possível.</p>
+                </div>
+                
+                <div class="contact-wrapper">
+                    <!-- Formulário -->
+                    <div class="contact-form">
+                        <form action="#" method="POST">
+                            <div class="form-group-grid">
+                                <div class="form-group">
+                                    <label for="name">Seu nome</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Seu e-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Serviço de Interesse</label>
+                                <select id="service" name="service">
+                                    <option>Limpeza e Conservação</option>
+                                    <option>Recepção e Portaria</option>
+                                    <option>Manutenção de Áreas Verdes</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Sua mensagem</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+
+                    <!-- Informações de Contato -->
+                    <div class="contact-info">
+                        <h3>Nossos Contatos</h3>
+                        <div class="contact-info-list">
+                            <a href="tel:+554112345678" class="contact-info-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <div>
+                                    <h4>Telefone</h4>
+                                    <p>(41) 1234-5678</p>
+                                </div>
+                            </a>
+                            <a href="mailto:contato@extralimp.com.br" class="contact-info-item">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <div>
+                                    <h4>E-mail</h4>
+                                    <p>contato@extralimp.com.br</p>
+                                </div>
+                            </a>
+                            <div class="contact-info-item">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <div>
+                                    <h4>Endereço</h4>
+                                    <p>Rua Exemplo, 123 - Curitiba, PR</p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Social Media Links -->
+                        <div class="social-links">
+                             <h4>Siga-nos</h4>
+                             <div class="social-icons">
+                                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+                                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                                 <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-container">
+             <a href="#" class="logo">
+                <img src="img/logo.png" alt="Logo Extralimp" class="logo-img">
+                <span class="logo-text">Extralimp</span>
+            </a>
+            <p>&copy; 2025 Extralimp. Todos os direitos reservados.</p>
         </div>
-        <div class="vantagem">
-          <h3>Compromisso com a Qualidade</h3>
-          <p>Garantia de serviços realizados com excelência e pontualidade.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section id="contato" class="contato">
-    <div class="container">
-      <h2>Contato</h2>
-      <p>Entre em contato conosco para solicitar um orçamento ou tirar dúvidas.</p>
-      <p><strong>Telefone:</strong> (41) 1234-5678</p>
-      <p><strong>E-mail:</strong> contato@extralimp.com.br</p>
-      <p><strong>Endereço:</strong> Rua Exemplo, 123 - Curitiba, PR</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Extralimp. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
