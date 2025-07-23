@@ -305,6 +305,13 @@ a {
     margin-bottom: 1.5rem;
 }
 
+.service-icon svg, 
+.service-icon .service-icon-img {
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+}
+
+
 .service-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -493,7 +500,7 @@ a {
     gap: 1rem;
 }
 .footer .logo-img-footer {
-    height: 8rem;
+    height: 3rem;
     width: auto;
 }
 .footer p {
