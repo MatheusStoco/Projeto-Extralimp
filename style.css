@@ -79,7 +79,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6.5rem; 
+    height: 8.5rem; /* Aumentado para acomodar a logo maior */
 }
 
 .logo {
@@ -89,7 +89,7 @@ a {
 }
 
 .logo-img {
-    height: 3.5rem; /* Ajustado para a nova logo */
+    height: 7rem; /* Tamanho da logo principal atualizado */
     width: auto;
 }
 
@@ -351,6 +351,21 @@ a {
     gap: 2rem;
     text-align: center;
 }
+
+.advantage-card {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
 .advantage-card svg {
     color: var(--primary-color);
     margin: 0 auto 1.25rem;
@@ -500,7 +515,7 @@ a {
     gap: 1rem;
 }
 .footer .logo-img-footer {
-    height: 3rem;
+    height: 7rem; /* Tamanho da logo do rodapé atualizado */
     width: auto;
 }
 .footer p {
