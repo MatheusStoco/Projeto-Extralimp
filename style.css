@@ -79,7 +79,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 8.5rem; /* Aumentado para acomodar a logo maior */
+    height: 8.5rem; 
 }
 
 .logo {
@@ -89,7 +89,7 @@ a {
 }
 
 .logo-img {
-    height: 7rem; /* Tamanho da logo principal atualizado */
+    height: 7rem; 
     width: auto;
 }
 
@@ -297,7 +297,7 @@ a {
     width: 4rem;
     height: 4rem;
     border-radius: 9999px;
-    background-color: #e0f2fe; /* Azul bem claro */
+    background-color: #e0f2fe;
     color: var(--primary-color);
     display: flex;
     align-items: center;
@@ -305,10 +305,9 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.service-icon svg, 
 .service-icon .service-icon-img {
-    width: 2rem; /* 32px */
-    height: 2rem; /* 32px */
+    width: 2rem;
+    height: 2rem;
 }
 
 
@@ -366,10 +365,12 @@ a {
     box-shadow: var(--shadow-lg);
 }
 
-.advantage-card svg {
-    color: var(--primary-color);
+.advantage-icon-img {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
     margin: 0 auto 1.25rem;
 }
+
 .advantage-card h3 {
     font-size: 1.25rem;
     font-weight: 700;
@@ -464,28 +465,6 @@ a {
     font-weight: 600;
     color: var(--bg-white);
 }
-.social-links {
-    margin-top: auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255,255,255, 0.3);
-}
-.social-links h4 {
-    text-align: center;
-    font-weight: 600;
-    color: var(--bg-white);
-    margin-bottom: 0.75rem;
-}
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.25rem;
-}
-.social-icons a {
-    color: rgba(255,255,255, 0.8);
-}
-.social-icons a:hover {
-    color: var(--bg-white);
-}
 
 @media (min-width: 640px) {
     .form-group-grid { grid-template-columns: repeat(2, 1fr); }
@@ -506,8 +485,8 @@ a {
     color: #cbd5e1;
 }
 .footer-container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,7 +494,7 @@ a {
     gap: 1rem;
 }
 .footer .logo-img-footer {
-    height: 7rem; /* Tamanho da logo do rodapé atualizado */
+    height: 7rem; 
     width: auto;
 }
 .footer p {
