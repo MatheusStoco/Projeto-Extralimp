@@ -389,6 +389,54 @@ a {
 }
 
 /* =================================
+   CLIENTS CAROUSEL
+   ================================= */
+.clients-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-carousel-track {
+    display: flex;
+    width: calc(250px * 20); /* 10 clientes duplicados = 20 logos */
+    animation: scroll 60s linear infinite;
+}
+
+.clients-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 10)); /* Metade da faixa (10 logos) */
+    }
+}
+
+.client-logo {
+    width: 250px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.client-logo img {
+    max-width: 150px;
+    transition: transform 0.3s ease; /* Transição para o efeito de zoom */
+}
+
+.client-logo a:hover img {
+    transform: scale(1.1); /* Efeito de zoom no hover */
+}
+
+/* =================================
    CONTACT FORM
    ================================= */
 .contact-wrapper {
