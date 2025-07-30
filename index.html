@@ -199,28 +199,31 @@
                     <!-- Formulário -->
                     <div class="contact-form">
                         <form action="#" method="POST">
-                            <div class="form-group-grid">
-                                <div class="form-group">
-                                    <label for="name">Seu nome</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Seu e-mail</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-field" placeholder=" " required>
+                                <label for="name" class="form-label">Seu nome</label>
+                                <span class="form-underline"></span>
                             </div>
                             <div class="form-group">
-                                <label for="service">Serviço de Interesse</label>
-                                <select id="service" name="service">
+                                <input type="email" id="email" name="email" class="form-field" placeholder=" " required>
+                                <label for="email" class="form-label">Seu e-mail</label>
+                                <span class="form-underline"></span>
+                            </div>
+                            <div class="form-group">
+                                <select id="service" name="service" class="form-field" required>
+                                    <option value="" disabled selected></option>
                                     <option>Limpeza e Conservação</option>
                                     <option>Recepção e Portaria</option>
                                     <option>Manutenção de Áreas Verdes</option>
                                     <option>Outro</option>
                                 </select>
+                                <label for="service" class="form-label">Serviço de Interesse</label>
+                                <span class="form-underline"></span>
                             </div>
                             <div class="form-group">
-                                <label for="message">Sua mensagem</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <textarea id="message" name="message" rows="4" class="form-field" placeholder=" " required></textarea>
+                                <label for="message" class="form-label">Sua mensagem</label>
+                                <span class="form-underline"></span>
                             </div>
                             <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
                         </form>
