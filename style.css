@@ -198,9 +198,23 @@ a {
     align-items: center;
     text-align: center;
     color: var(--bg-white);
-    background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o espaço sem distorcer */
+    object-position: center;
 }
 
 .hero-overlay {
@@ -324,31 +338,6 @@ a {
     margin-bottom: 1rem;
 }
 
-/* About */
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-.about-image img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-lg);
-}
-.about-content h2 {
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-top: 0.5rem;
-}
-.about-content p {
-    font-size: 1.125rem;
-    margin-top: 1.5rem;
-}
-.about-content .btn {
-    margin-top: 2rem;
-}
-
 /* Advantages */
 .advantages-grid {
     display: grid;
@@ -391,7 +380,6 @@ a {
 
 @media (min-width: 1024px) {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
-    .about-container { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* =================================
@@ -443,7 +431,7 @@ a {
 }
 
 /* =================================
-   CONTACT FORM (MINIMALIST STYLE)
+   CONTACT FORM (MINIMALIST STYLE - CORRECTED)
    ================================= */
 .contact-wrapper {
     display: grid;
