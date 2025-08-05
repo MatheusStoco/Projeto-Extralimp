@@ -3,17 +3,23 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- LÓGICA DE ROLAGEM SUAVE ---
+    // --- LÓGICA DE ROLAGEM SUAVE (COM AJUSTE PARA O HEADER) ---
+    const header = document.querySelector('.header');
+    const headerHeight = header ? header.offsetHeight : 0; // Pega a altura do header
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return; 
             const targetElement = document.querySelector(targetId);
+            
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
