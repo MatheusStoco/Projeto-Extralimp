@@ -1,271 +1,598 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Extralimp Serviços Integrados - Limpeza, Portaria e Jardinagem</title>
-    
+    <title>
+      Extralimp Serviços Integrados - Limpeza, Portaria e Jardinagem
+    </title>
+
     <!-- Ícone do Site -->
-    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="icon" type="image/png" href="img/icon.png" />
 
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Folha de Estilo CSS -->
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <div class="container header-container">
-            <!-- Logo -->
-            <a href="#" class="logo">
-                <img src="img/logo.png" alt="Logo Extralimp" class="logo-img">
-            </a>
+      <div class="container header-container">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="img/logo.png" alt="Logo Extralimp" class="logo-img" />
+        </a>
 
-            <!-- Navegação para Desktop -->
-            <nav class="nav-desktop">
-                <a href="#servicos">Serviços</a>
-                <a href="#vantagens">Vantagens</a>
-                <a href="#clientes">Clientes</a>
-                <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
-            </nav>
-
-            <!-- Botão do Menu Mobile -->
-            <button id="menu-toggle" class="menu-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-            </button>
-        </div>
-        <!-- Menu Mobile -->
-        <nav id="mobile-menu" class="nav-mobile hidden">
-            <a href="#servicos">Serviços</a>
-            <a href="#vantagens">Vantagens</a>
-            <a href="#clientes">Clientes</a>
-            <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+        <!-- Navegação para Desktop -->
+        <nav class="nav-desktop">
+          <a href="#servicos">Serviços</a>
+          <a href="#vantagens">Vantagens</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
         </nav>
+
+        <!-- Botão do Menu Mobile -->
+        <button id="menu-toggle" class="menu-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-menu"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-close hidden"
+          >
+            <line x1="18" x2="6" y1="6" y2="18" />
+            <line x1="6" x2="18" y1="6" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <!-- Menu Mobile -->
+      <nav id="mobile-menu" class="nav-mobile hidden">
+        <a href="#servicos">Serviços</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+      </nav>
     </header>
 
     <main>
-        <!-- ========== HERO SECTION ========== -->
-        <section class="hero">
-            <div class="hero-background">
-                <img src="img/background.png" alt="Profissional da Extralimp realizando serviço">
-            </div>
-            <div class="hero-overlay"></div>
-            <div class="container hero-container">
-                <h1>Ambientes impecáveis, <span class="text-primary">relações de confiança</span>.</h1>
-                <p>Soluções completas e personalizadas em limpeza, recepção e manutenção de áreas verdes para empresas e condomínios em Curitiba-PR.</p>
-                <div class="hero-buttons">
-                    <a href="#contato" class="btn btn-primary btn-lg">Fale com um especialista</a>
-                    <a href="#servicos" class="btn btn-secondary btn-lg">Nossos Serviços</a>
-                </div>
-            </div>
-        </section>
+      <!-- ========== HERO SECTION ========== -->
+      <section class="hero">
+        <div class="hero-background">
+          <img
+            src="img/background.png"
+            alt="Profissional da Extralimp realizando serviço"
+          />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+          <h1>
+            Ambientes impecáveis,
+            <span class="text-primary">relações de confiança</span>.
+          </h1>
+          <p>
+            Soluções completas e personalizadas em limpeza, recepção e
+            manutenção de áreas verdes para empresas e condomínios em
+            Curitiba-PR.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contato" class="btn btn-primary btn-lg"
+              >Fale com um especialista</a
+            >
+            <a href="#servicos" class="btn btn-secondary btn-lg"
+              >Nossos Serviços</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <!-- ========== SERVIÇOS ========== -->
-        <section id="servicos" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="subtitle">Nossas Especialidades</span>
-                    <h2>Soluções que transformam o seu espaço</h2>
-                    <p>Oferecemos um portfólio completo para garantir a conservação, segurança e bem-estar do seu patrimônio.</p>
-                </div>
+      <!-- ========== SERVIÇOS ========== -->
+      <section id="servicos" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Nossas Especialidades</span>
+            <h2>Soluções que transformam o seu espaço</h2>
+            <p>
+              Oferecemos um portfólio completo para garantir a conservação,
+              segurança e bem-estar do seu patrimônio.
+            </p>
+          </div>
 
-                <div class="services-grid">
-                    <!-- Card Serviço: Limpeza -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="img/svg icons/broom.svg" alt="Vassoura" class="service-icon-img">
-                        </div>
-                        <h3>Limpeza e Conservação</h3>
-                        <p>Serviços de limpeza predial, comercial e pós-obra com equipes treinadas, equipamentos modernos e produtos de alta performance.</p>
-                    </div>
+          <div class="services-grid">
+            <!-- Card Serviço: Limpeza -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="img/svg icons/broom.svg"
+                  alt="Vassoura"
+                  class="service-icon-img"
+                />
+              </div>
+              <h3>Limpeza e Conservação</h3>
+              <p>
+                Serviços de limpeza predial, comercial e pós-obra com equipes
+                treinadas, equipamentos modernos e produtos de alta performance.
+              </p>
+            </div>
 
-                    <!-- Card Serviço: Recepção -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                           <img src="img/svg icons/reception.svg" alt="Atendimento" class="service-icon-img">
-                        </div>
-                        <h3>Recepção e Portaria</h3>
-                        <p>Profissionais qualificados para controle de acesso, atendimento ao público e portaria, garantindo segurança e uma excelente primeira impressão.</p>
-                    </div>
-                    
-                    <!-- Card Serviço: Áreas Verdes -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <img src="img/svg icons/grass.svg" alt="Ícone de Grama" class="service-icon-img">
-                        </div>
-                        <h3>Manutenção de Áreas Verdes</h3>
-                        <p>Cuidado especializado com jardins e áreas externas, incluindo poda, paisagismo, tratamento de solo e manutenção contínua.</p>
-                    </div>
-                </div>
+            <!-- Card Serviço: Recepção -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="img/svg icons/reception.svg"
+                  alt="Atendimento"
+                  class="service-icon-img"
+                />
+              </div>
+              <h3>Recepção e Portaria</h3>
+              <p>
+                Profissionais qualificados para controle de acesso, atendimento
+                ao público e portaria, garantindo segurança e uma excelente
+                primeira impressão.
+              </p>
             </div>
-        </section>  
-        
-        <!-- ========== VANTAGENS ========== -->
-        <section id="vantagens" class="section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <span class="subtitle">Nossos Diferenciais</span>
-                    <h2>Por que escolher a Extralimp?</h2>
-                </div>
-                <div class="advantages-grid">
-                    <!-- Vantagem 1 -->
-                    <div class="advantage-card">
-                        <img src="img/svg icons/diamond.svg" alt="Ícone de Qualidade Profissional" class="advantage-icon-img">
-                        <h3>Profissionais Qualificados</h3>
-                        <p>Equipe em constante treinamento, pronta para executar os serviços com máxima eficiência e discrição.</p>
-                    </div>
-                    <!-- Vantagem 2 -->
-                    <div class="advantage-card">
-                        <img src="img/svg icons/annotation.svg" alt="Ícone de Atendimento Personalizado" class="advantage-icon-img">
-                        <h3>Atendimento Personalizado</h3>
-                        <p>Desenvolvemos planos de trabalho sob medida, que se ajustam perfeitamente à rotina e orçamento do seu negócio.</p>
-                    </div>
-                    <!-- Vantagem 3 -->
-                    <div class="advantage-card">
-                        <img src="img/svg icons/quality.svg" alt="Ícone de Qualidade Garantida" class="advantage-icon-img">
-                        <h3>Qualidade Garantida</h3>
-                        <p>Utilizamos checklists e supervisão contínua para assegurar a excelência e a sua total satisfação.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ========== CLIENTS CAROUSEL ========== -->
-        <section id="clientes" class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="subtitle">Nossos Clientes</span>
-                    <h2>Contratos que atendemos com excelência</h2>
-                    <p>Construímos parcerias de confiança com empresas e condomínios de diversos segmentos.</p>
-                </div>
+            <!-- Card Serviço: Áreas Verdes -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img
+                  src="img/svg icons/grass.svg"
+                  alt="Ícone de Grama"
+                  class="service-icon-img"
+                />
+              </div>
+              <h3>Manutenção de Áreas Verdes</h3>
+              <p>
+                Cuidado especializado com jardins e áreas externas, incluindo
+                poda, paisagismo, tratamento de solo e manutenção contínua.
+              </p>
             </div>
-            <div class="clients-carousel-container">
-                <div class="clients-carousel-track">
-                    <!-- Logos Originais -->
-                    <div class="client-logo"><a href="https://www.celepar.pr.gov.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/celepar.png" alt="Logo Celepar"></a></div>
-                    <div class="client-logo"><a href="https://www2.fab.mil.br/cindacta2/" target="_blank" rel="noopener noreferrer"><img src="img/clients/cindacta.png" alt="Logo Cindacta"></a></div>
-                    <div class="client-logo"><a href="https://www.copel.com/site/" target="_blank" rel="noopener noreferrer"><img src="img/clients/copel.png" alt="Logo Copel"></a></div>
-                    <div class="client-logo"><a href="https://www.gov.br/dnit/pt-br" target="_blank" rel="noopener noreferrer"><img src="img/clients/dnit.png" alt="Logo DNIT"></a></div>
-                    <div class="client-logo"><a href="https://ipmc.curitiba.pr.gov.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ipmc.png" alt="Logo IPMC"></a></div>
-                    <div class="client-logo"><a href="https://www.ippuc.org.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ippuc.png" alt="Logo IPPUC"></a></div>
-                    <div class="client-logo"><a href="http://liggavc.com.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ligga.png" alt="Logo Ligga"></a></div>
-                    <div class="client-logo"><a href="https://www.mpf.mp.br/pr" target="_blank" rel="noopener noreferrer"><img src="img/clients/procuradoria.png" alt="Logo Procuradoria"></a></div>
-                    <div class="client-logo"><a href="https://www.simepar.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/simepar.png" alt="Logo Simepar"></a></div>
-                    <div class="client-logo"><a href="https://ambarenergia.com.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ambar.png" alt="Logo Ambar"></a></div>
-                    <!-- Logos Duplicados para o Efeito Contínuo -->
-                    <div class="client-logo"><a href="https://www.celepar.pr.gov.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/celepar.png" alt="Logo Celepar"></a></div>
-                    <div class="client-logo"><a href="https://www2.fab.mil.br/cindacta2/" target="_blank" rel="noopener noreferrer"><img src="img/clients/cindacta.png" alt="Logo Cindacta"></a></div>
-                    <div class="client-logo"><a href="https://www.copel.com/site/" target="_blank" rel="noopener noreferrer"><img src="img/clients/copel.png" alt="Logo Copel"></a></div>
-                    <div class="client-logo"><a href="https://www.gov.br/dnit/pt-br" target="_blank" rel="noopener noreferrer"><img src="img/clients/dnit.png" alt="Logo DNIT"></a></div>
-                    <div class="client-logo"><a href="https://ipmc.curitiba.pr.gov.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ipmc.png" alt="Logo IPMC"></a></div>
-                    <div class="client-logo"><a href="https://www.ippuc.org.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ippuc.png" alt="Logo IPPUC"></a></div>
-                    <div class="client-logo"><a href="http://liggavc.com.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ligga.png" alt="Logo Ligga"></a></div>
-                    <div class="client-logo"><a href="https://www.mpf.mp.br/pr" target="_blank" rel="noopener noreferrer"><img src="img/clients/procuradoria.png" alt="Logo Procuradoria"></a></div>
-                    <div class="client-logo"><a href="https://www.simepar.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/simepar.png" alt="Logo Simepar"></a></div>
-                    <div class="client-logo"><a href="https://ambarenergia.com.br/" target="_blank" rel="noopener noreferrer"><img src="img/clients/ambar.png" alt="Logo Ambar"></a></div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- ========== CONTATO ========== -->
-        <section id="contato" class="section bg-light">
-            <div class="container">
-                <div class="section-header">
-                    <span class="subtitle">Fale Conosco</span>
-                    <h2>Estamos prontos para atender você</h2>
-                    <p>Preencha o formulário abaixo ou entre em contato pelos nossos canais. Nossa equipe retornará o mais breve possível.</p>
-                </div>
-                
-                <div class="contact-wrapper">
-                    <!-- Formulário -->
-                    <div class="contact-form">
-                        <form id="contact-form" action="enviar-email.php" method="POST">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" class="form-field" placeholder="Seu nome" required>
-                                <label for="name" class="form-label">Seu nome</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" class="form-field" placeholder="Seu e-mail" required>
-                                <label for="email" class="form-label">Seu e-mail</label>
-                            </div>
-                            <div class="form-group">
-                                <select id="service" name="service" class="form-field" required>
-                                    <option value="" disabled selected></option>
-                                    <option>Limpeza e Conservação</option>
-                                    <option>Recepção e Portaria</option>
-                                    <option>Manutenção de Áreas Verdes</option>
-                                    <option>Outro</option>
-                                </select>
-                                <label for="service" class="form-label">Serviço de Interesse</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" rows="4" class="form-field" placeholder="Sua mensagem" required></textarea>
-                                <label for="message" class="form-label">Sua mensagem</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
-                        </form>
-                    </div>
-
-                    <!-- Informações de Contato -->
-                    <div class="contact-info">
-                        <h3>Nossos Contatos</h3>
-                        <div class="contact-info-list">
-                            <a href="tel:+554133524212" class="contact-info-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                <div>
-                                    <h4>Telefone</h4>
-                                    <p>+55 (41) 3352-4212</p>
-                                </div>
-                            </a>
-                            <a href="mailto:extralimpserv@outlook.com" class="contact-info-item">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                                <div>
-                                    <h4>E-mail</h4>
-                                    <p>extralimpserv@outlook.com</p>
-                                </div>
-                            </a>
-                            <div class="contact-info-item">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                <div>
-                                    <h4>Endereço</h4>
-                                    <p>Rua Carlos Augusto Cornelsen, 200 - Curitiba/PR</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- ========== VANTAGENS ========== -->
+      <section id="vantagens" class="section bg-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Nossos Diferenciais</span>
+            <h2>Por que escolher a Extralimp?</h2>
+          </div>
+          <div class="advantages-grid">
+            <!-- Vantagem 1 -->
+            <div class="advantage-card">
+              <img
+                src="img/svg icons/diamond.svg"
+                alt="Ícone de Qualidade Profissional"
+                class="advantage-icon-img"
+              />
+              <h3>Profissionais Qualificados</h3>
+              <p>
+                Equipe em constante treinamento, pronta para executar os
+                serviços com máxima eficiência e discrição.
+              </p>
             </div>
-        </section>
+            <!-- Vantagem 2 -->
+            <div class="advantage-card">
+              <img
+                src="img/svg icons/annotation.svg"
+                alt="Ícone de Atendimento Personalizado"
+                class="advantage-icon-img"
+              />
+              <h3>Atendimento Personalizado</h3>
+              <p>
+                Desenvolvemos planos de trabalho sob medida, que se ajustam
+                perfeitamente à rotina e orçamento do seu negócio.
+              </p>
+            </div>
+            <!-- Vantagem 3 -->
+            <div class="advantage-card">
+              <img
+                src="img/svg icons/quality.svg"
+                alt="Ícone de Qualidade Garantida"
+                class="advantage-icon-img"
+              />
+              <h3>Qualidade Garantida</h3>
+              <p>
+                Utilizamos checklists e supervisão contínua para assegurar a
+                excelência e a sua total satisfação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CLIENTS CAROUSEL ========== -->
+      <section id="clientes" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Nossos Clientes</span>
+            <h2>Contratos que atendemos com excelência</h2>
+            <p>
+              Construímos parcerias de confiança com empresas e condomínios de
+              diversos segmentos.
+            </p>
+          </div>
+        </div>
+        <div class="clients-carousel-container">
+          <div class="clients-carousel-track">
+            <!-- Logos Originais -->
+            <div class="client-logo">
+              <a
+                href="https://www.celepar.pr.gov.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/celepar.png" alt="Logo Celepar"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www2.fab.mil.br/cindacta2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/cindacta.png" alt="Logo Cindacta"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.copel.com/site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/copel.png" alt="Logo Copel"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.gov.br/dnit/pt-br"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/dnit.png" alt="Logo DNIT"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://ipmc.curitiba.pr.gov.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ipmc.png" alt="Logo IPMC"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.ippuc.org.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ippuc.png" alt="Logo IPPUC"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="http://liggavc.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ligga.png" alt="Logo Ligga"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.mpf.mp.br/pr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="img/clients/procuradoria.png"
+                  alt="Logo Procuradoria"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.simepar.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/simepar.png" alt="Logo Simepar"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://ambarenergia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ambar.png" alt="Logo Ambar"
+              /></a>
+            </div>
+            <!-- Logos Duplicados para o Efeito Contínuo -->
+            <div class="client-logo">
+              <a
+                href="https://www.celepar.pr.gov.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/celepar.png" alt="Logo Celepar"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www2.fab.mil.br/cindacta2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/cindacta.png" alt="Logo Cindacta"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.copel.com/site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/copel.png" alt="Logo Copel"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.gov.br/dnit/pt-br"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/dnit.png" alt="Logo DNIT"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://ipmc.curitiba.pr.gov.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ipmc.png" alt="Logo IPMC"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.ippuc.org.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ippuc.png" alt="Logo IPPUC"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="http://liggavc.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ligga.png" alt="Logo Ligga"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.mpf.mp.br/pr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="img/clients/procuradoria.png"
+                  alt="Logo Procuradoria"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://www.simepar.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/simepar.png" alt="Logo Simepar"
+              /></a>
+            </div>
+            <div class="client-logo">
+              <a
+                href="https://ambarenergia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="img/clients/ambar.png" alt="Logo Ambar"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTATO ========== -->
+      <section id="contato" class="section bg-light">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Fale Conosco</span>
+            <h2>Estamos prontos para atender você</h2>
+            <p>
+              Preencha o formulário abaixo ou entre em contato pelos nossos
+              canais. Nossa equipe retornará o mais breve possível.
+            </p>
+          </div>
+
+          <div class="contact-wrapper">
+            <!-- Formulário -->
+            <div class="contact-form">
+              <form
+                id="contact-form"
+                action="https://formsubmit.co/stocom6@gmail.com"
+                method="POST"
+              >
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-field"
+                    placeholder="Seu nome"
+                    required
+                  />
+                  <label for="name" class="form-label">Seu nome</label>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-field"
+                    placeholder="Seu e-mail"
+                    required
+                  />
+                  <label for="email" class="form-label">Seu e-mail</label>
+                </div>
+                <div class="form-group">
+                  <select
+                    id="service"
+                    name="service"
+                    class="form-field"
+                    required
+                  >
+                    <option value="" disabled selected></option>
+                    <option>Limpeza e Conservação</option>
+                    <option>Recepção e Portaria</option>
+                    <option>Manutenção de Áreas Verdes</option>
+                    <option>Outro</option>
+                  </select>
+                  <label for="service" class="form-label"
+                    >Serviço de Interesse</label
+                  >
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-field"
+                    placeholder="Sua mensagem"
+                    required
+                  ></textarea>
+                  <label for="message" class="form-label">Sua mensagem</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+
+            <!-- Informações de Contato -->
+            <div class="contact-info">
+              <h3>Nossos Contatos</h3>
+              <div class="contact-info-list">
+                <a href="tel:+554133524212" class="contact-info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    />
+                  </svg>
+                  <div>
+                    <h4>Telefone</h4>
+                    <p>+55 (41) 3352-4212</p>
+                  </div>
+                </a>
+                <a
+                  href="mailto:extralimpserv@outlook.com"
+                  class="contact-info-item"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <div>
+                    <h4>E-mail</h4>
+                    <p>extralimpserv@outlook.com</p>
+                  </div>
+                </a>
+                <div class="contact-info-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <div>
+                    <h4>Endereço</h4>
+                    <p>Rua Carlos Augusto Cornelsen, 200 - Curitiba/PR</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="container footer-container">
-             <a href="#" class="logo">
-                <img src="img/logo.png" alt="Logo Extralimp" class="logo-img-footer">
-             </a>
-            <p>&copy; 2025 Extralimp Serviços Integrados. Todos os direitos reservados.</p>
-        </div>
+      <div class="container footer-container">
+        <a href="#" class="logo">
+          <img
+            src="img/logo.png"
+            alt="Logo Extralimp"
+            class="logo-img-footer"
+          />
+        </a>
+        <p>
+          &copy; 2025 Extralimp Serviços Integrados. Todos os direitos
+          reservados.
+        </p>
+      </div>
     </footer>
 
     <!-- ========== POPUP ========== -->
     <div id="popup-container" class="popup-container hidden">
-        <div class="popup-overlay"></div>
-        <div class="popup-box">
-            <div id="popup-icon"></div>
-            <h2 id="popup-title"></h2>
-            <p id="popup-message"></p>
-            <button id="popup-close-btn" class="btn btn-primary">Fechar</button>
-        </div>
+      <div class="popup-overlay"></div>
+      <div class="popup-box">
+        <div id="popup-icon"></div>
+        <h2 id="popup-title"></h2>
+        <p id="popup-message"></p>
+        <button id="popup-close-btn" class="btn btn-primary">Fechar</button>
+      </div>
     </div>
 
     <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
