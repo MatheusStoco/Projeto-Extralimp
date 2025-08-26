@@ -10,11 +10,11 @@
     <!-- Ícone do Site -->
     <link rel="icon" type="image/png" href="img/icon.png" />
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -35,7 +35,23 @@
           <a href="#servicos">Serviços</a>
           <a href="#vantagens">Vantagens</a>
           <a href="#clientes">Clientes</a>
-          <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+          <a href="#contato" class="btn btn-primary">
+            <span class="btn-text destaque">Solicite um Orçamento</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
         </nav>
 
         <!-- Botão do Menu Mobile -->
@@ -74,11 +90,29 @@
         </button>
       </div>
       <!-- Menu Mobile -->
-      <nav id="mobile-menu" class="nav-mobile hidden">
-        <a href="#servicos">Serviços</a>
-        <a href="#vantagens">Vantagens</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contato" class="btn btn-primary">Solicite um Orçamento</a>
+      <nav id="mobile-menu" class="nav-mobile">
+        <div class="nav-mobile-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#vantagens">Vantagens</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#contato" class="btn btn-primary">
+            <span>Solicite um Orçamento</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </nav>
     </header>
 
@@ -103,9 +137,9 @@
             Curitiba-PR.
           </p>
           <div class="hero-buttons">
-            <a href="#contato" class="btn btn-primary btn-lg"
-              >Fale com um especialista</a
-            >
+            <a href="#contato" class="btn btn-primary btn-lg">
+              <span>Fale com um especialista</span>
+            </a>
             <a href="#servicos" class="btn btn-secondary btn-lg"
               >Nossos Serviços</a
             >
@@ -430,9 +464,23 @@
             <div class="contact-form">
               <form
                 id="contact-form"
-                action="https://formsubmit.co/stocom6@gmail.com"
+                action="https://formsubmit.co/extralimpserv@outlook.com"
                 method="POST"
               >
+                <!-- Configurações do FormSubmit -->
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://extralimpserv.com.br/obrigado.html"
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Novo Contato do Site Extralimp!"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
                 <div class="form-group">
                   <input
                     type="text"
@@ -458,7 +506,7 @@
                 <div class="form-group">
                   <select
                     id="service"
-                    name="service"
+                    name="Serviço"
                     class="form-field"
                     required
                   >
@@ -475,7 +523,7 @@
                 <div class="form-group">
                   <textarea
                     id="message"
-                    name="message"
+                    name="Mensagem"
                     rows="4"
                     class="form-field"
                     placeholder="Sua mensagem"
@@ -514,7 +562,10 @@
                     <p>+55 (41) 3352-4212</p>
                   </div>
                 </a>
-                <a href="mailto:stocom6@gmail.com" class="contact-info-item">
+                <a
+                  href="mailto:extralimpserv@outlook.com"
+                  class="contact-info-item"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -556,6 +607,30 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== MAPA ========== -->
+      <section id="mapa" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Nossa Localização</span>
+            <h2>Encontre-nos facilmente</h2>
+            <p>
+              Confira a localização da Extralimp Serviços Integrados no mapa
+              abaixo.
+            </p>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.1123456789!2d-49.2681234567!3d-25.4278901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3e1b1234567%3A0xabcdef1234567890!2sRua%20Carlos%20Augusto%20Cornelsen%2C%20200%20-%20Curitiba%2C%20PR!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>

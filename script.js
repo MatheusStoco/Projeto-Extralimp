@@ -4,11 +4,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- LÓGICA DE ROLAGEM SUAVE (COM AJUSTE PARA O HEADER) ---
   const header = document.querySelector(".header");
-  const headerHeight = header ? header.offsetHeight : 0; // Pega a altura do header
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
+      const headerHeight = header ? header.offsetHeight : 0;
       const targetId = this.getAttribute("href");
       if (targetId === "#") return;
       const targetElement = document.querySelector(targetId);
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- LÓGICA DO MENU MOBILE ---
+  // --- LÓGICA DO MENU MOBILE COM ANIMAÇÃO ---
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
@@ -36,14 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconClose = menuToggle.querySelector(".icon-close");
 
     menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("open");
       iconMenu.classList.toggle("hidden");
       iconClose.classList.toggle("hidden");
     });
 
     mobileMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("open");
         iconMenu.classList.remove("hidden");
         iconClose.classList.add("hidden");
       });
@@ -77,22 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
           if (response.ok) {
             return response.json();
           } else {
-            // Trata erros de rede ou do servidor
             return response.json().then((data) => {
-              throw new Error(
-                data.error || "Erro no servidor. Tente novamente."
-              );
+              throw new Error(data.error || "Erro no servidor.");
             });
           }
         })
         .then((data) => {
-          // FormSubmit responde com {ok: true} em caso de sucesso
           if (data.ok) {
+            // Resposta de sucesso do FormSubmit
             showPopup("success");
             contactForm.reset();
           } else {
-            // Trata erros reportados pelo FormSubmit
-            showPopup("error", data.error);
+            showPopup("error", data.error); // Mostra erro específico se houver
           }
         })
         .catch((error) => {
