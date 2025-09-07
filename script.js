@@ -1,63 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contact-form");
-  const popupContainer = document.getElementById("popup-container");
-  const popupCloseBtn = document.getElementById("popup-close-btn");
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const iconMenu = document.querySelector(".icon-menu");
+  const iconClose = document.querySelector(".icon-close");
 
-  if (contactForm && popupContainer && popupCloseBtn) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const formData = new FormData(this);
-      const submitButton = this.querySelector('button[type="submit"]');
-      const originalButtonText = submitButton.textContent;
-
-      submitButton.textContent = "Enviando...";
-      submitButton.disabled = true;
-
-      fetch(this.action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      })
-        .then(() => {
-          showPopupSuccess();
-          contactForm.reset(); // limpa o formulário
-        })
-        .catch((err) => {
-          console.error("Erro ao enviar:", err);
-        })
-        .finally(() => {
-          submitButton.textContent = originalButtonText;
-          submitButton.disabled = false;
-        });
+  // Verifica se os elementos do menu existem antes de adicionar os eventos
+  if (menuToggle && mobileMenu && iconMenu && iconClose) {
+    // Lógica para abrir/fechar o menu mobile
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("open");
+      iconMenu.classList.toggle("hidden");
+      iconClose.classList.toggle("hidden");
     });
 
-    function showPopupSuccess() {
-      const popupIcon = document.getElementById("popup-icon");
-      const popupTitle = document.getElementById("popup-title");
-      const popupMessage = document.getElementById("popup-message");
-      const popupBox = popupContainer.querySelector(".popup-box");
-
-      popupBox.classList.remove("popup-error");
-      popupBox.classList.add("popup-success");
-
-      popupIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`;
-      popupTitle.textContent = "Mensagem Enviada!";
-      popupMessage.textContent =
-        "Agradecemos o seu contato. Nossa equipe retornará o mais breve possível.";
-
-      popupContainer.classList.remove("hidden");
-      document.body.classList.add("no-scroll");
-    }
-
-    function closePopup() {
-      popupContainer.classList.add("hidden");
-      document.body.classList.remove("no-scroll");
-    }
-
-    popupCloseBtn.addEventListener("click", closePopup);
-    popupContainer
-      .querySelector(".popup-overlay")
-      .addEventListener("click", closePopup);
+    const navLinks = mobileMenu.querySelectorAll("a");
+    // Lógica para fechar o menu ao clicar em um link
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (mobileMenu.classList.contains("open")) {
+          mobileMenu.classList.remove("open");
+          iconMenu.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+        }
+      });
+    });
   }
+
+  // Lógica para a rolagem suave com ajuste para o header
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+
+      // Se o link for apenas "#", rola para o topo da página
+      if (targetId === "#") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      const targetElement = document.querySelector(targetId);
+
+      // Se o elemento de destino existir, executa a rolagem suave
+      if (targetElement) {
+        e.preventDefault();
+        const header = document.querySelector(".header");
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 });
